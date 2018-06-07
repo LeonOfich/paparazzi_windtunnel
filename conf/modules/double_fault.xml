@@ -1,0 +1,16 @@
+<!DOCTYPE module SYSTEM "module.dtd">
+
+<module name="double_fault">
+  <doc>
+    <description>Introduce a double (diagonal) rotor failure</description>
+  </doc>
+  <header>
+    <file name="double_fault.h"/>
+  </header>
+  <init fun="double_fault_init()"/>
+  <periodic fun="double_fault()" freq="512" stop="double_fault_init()" autorun="FALSE"/>
+  <makefile>
+    <file name="double_fault.c"/>
+  </makefile>
+</module>
+
